@@ -146,9 +146,11 @@ const BusinessInfo = () => {
                                 className='text-[16px] font-medium text-[#737373] m-2'
                                 name="registeredStates"
                                 label="What state(s) is your business registered in?"
+                                
                                 rules={[{ required: true }]}
                             >
-                                <Select style={{ width: '100%', height: 48, background: '#FFFFFF', borderRadius: '10px' }} >
+                                <Select style={{ width: '100%', height: 48, background: '#FFFFFF', borderRadius: '10px', }} placeholder="New York" >
+                               
                                     <Select.Option value="NY">New York</Select.Option>
                                     <Select.Option value="CA">California</Select.Option>
                                     <Select.Option value="FL">Florida</Select.Option>
@@ -161,7 +163,7 @@ const BusinessInfo = () => {
                                 label="What state(s) do you anticipate providing services in?"
                                 rules={[{ required: true }]}
                             >
-                                <Select style={{ width: '100%', height: 48, background: '#FFFFFF', borderRadius: '10px' }} >
+                                <Select style={{ width: '100%', height: 48, background: '#FFFFFF', borderRadius: '10px' }} placeholder="New York, Los Angles, Florida" >
                                     <Select.Option value="NY">New York</Select.Option>
                                     <Select.Option value="CA">California</Select.Option>
                                     <Select.Option value="FL">Florida</Select.Option>
@@ -182,14 +184,14 @@ const BusinessInfo = () => {
                                 label="Additional questions you have for the scheduled call please write below"
                                 rules={[{ required: true }, { type: 'string', min: 2 }]}
                             >
-                                <TextArea rows={100}  style={{ width: '100%' }} placeholder="Please write your questions here" allowClear />
+                                <TextArea rows={100}  style={{ width: '100%', height:'150px' }} placeholder="Please write your questions here" allowClear />
                             </Form.Item>
 
                         </Col>
                     </Row>
                     <center>
-                        <Button type="primary" htmlType="submit" style={{ width: '132px', height: '54px', marginRight: '50px' }}>Approve</Button>
-                        <Button type="danger" style={{ width: '132px', height: '54px' }}>Reject</Button>
+                        <Button  htmlType="submit" style={{ width: '132px', height: '54px', marginRight: '50px', color:'#ffffff', fontSize:'24px', fontWeight:500, background:"#80C738" }}>Approve</Button>
+                        <Button type="danger" style={{ width: '132px', height: '54px', color:'#ffffff', fontSize:'24px', fontWeight:500, background:"#DF3232" }}>Reject</Button>
                     </center>
                 </Form>
             </div>

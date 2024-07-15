@@ -6,7 +6,7 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { FcApproval } from "react-icons/fc";
 import { MdOutlineCancel } from "react-icons/md";
 import { Link, useNavigate } from 'react-router-dom';
-import lamisha from "../../assets/client2.png";
+import Client from "../../assets/client.png";
 
 const List = () => {
     const navigate = useNavigate();
@@ -56,7 +56,7 @@ const List = () => {
             render: (value) => (
                 <div className='flex gap-2'>
                     <img className='w-8' 
-                    src={lamisha} alt="" />
+                        src={Client} alt="User Avatar" />
                     <h1>{value}</h1>
                 </div>
             ),
@@ -93,20 +93,6 @@ const List = () => {
         });
     }
 
-    const onFinish = () => {
-        message.success('Submit success!');
-    };
-
-    const onFinishFailed = () => {
-        message.error('Submit failed!');
-    };
-
-    const start = () => {
-        setLoading(true);
-        setTimeout(() => {
-            setLoading(false);
-        }, 1000);
-    };
 
     return (
         <div>

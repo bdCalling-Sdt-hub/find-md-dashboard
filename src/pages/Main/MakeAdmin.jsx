@@ -1,32 +1,13 @@
 import React, { useState } from 'react';
-import { Button, Form, Input, message, Row, Col, Table, Dropdown, Space, Tooltip, Menu, Select } from 'antd';
-import { IoIosSearch } from "react-icons/io";
+import {  Table, Dropdown, Menu, Select } from 'antd';
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { FcApproval } from "react-icons/fc";
 import { MdOutlineCancel } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
-import lamisha from "../../assets/client2.png";
-
+import Client from "../../assets/client.png";
 const MakeAdmin = () => {
-    const [form] = Form.useForm();
-    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-
-    const onFinish = () => {
-        message.success('Submit success!');
-    };
-
-    const onFinishFailed = () => {
-        message.error('Submit failed!');
-    };
-
-    const start = () => {
-        setLoading(true);
-        setTimeout(() => {
-            setLoading(false);
-        }, 1000);
-    };
 
     const handleMenuClick = (e) => {
         if (e.key === '1') {
@@ -65,8 +46,12 @@ const MakeAdmin = () => {
             key: 'user',
             render: (value) => (
                 <div className='flex gap-2'>
-                    <img className='w-8' 
-src={lamisha} alt="" />                    <h1>{value}</h1>
+                    <img 
+                        className='w-8' 
+                        src={Client}
+                        alt="User Avatar"
+                    />
+                    <h1>{value}</h1>
                 </div>
             ),
         },

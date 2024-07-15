@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import lamisha from "../../assets/lamisha.png";
+import Client from "../../assets/lamisha.png";
 
 const Header = () => {
     return (
@@ -8,7 +8,7 @@ const Header = () => {
                 <div className='flex items-center gap-[10px]' >
                     <img  
                         style={{width: 40, height: 40, borderRadius: "100%", border: "2px solid black"}} 
-                        src={lamisha}
+                        src={Client} 
                         alt=""
                     />
                     

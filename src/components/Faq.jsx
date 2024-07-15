@@ -1,6 +1,4 @@
 import React from 'react';
-import { Button, Form, message, Row, Col, Table, Modal } from 'antd';
-import { GoQuestion } from "react-icons/go";
 import { FaRegQuestionCircle, FaTrash } from 'react-icons/fa';
 const Faq = () => {
     return (

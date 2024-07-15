@@ -51,7 +51,7 @@ const PersonalInfo = () => {
                         <div className='text-[32px] font-medium text-black mt-10' style={{ marginLeft: '300px' }}>Personal Information</div>
                         <div className='w-full pl-20 pr-20 rounded-md bg-[#E8F6FE] mt-2 pb-10 '>
 
-                            <Form 
+                            <Form
                                 form={form}
                                 layout="vertical"
                                 onFinish={onFinish}
@@ -82,21 +82,29 @@ const PersonalInfo = () => {
                                         >
                                             <Input placeholder="+14842634382" style={{ width: '100%', height: 48, background: '#FFFFFF', borderRadius: '10px' }} />
                                         </Form.Item>
-                                        <Form.Item className='text-[16px] font-medium text-[#737373] m-2'
-                                            name="Phone"
-                                            label="Phone"
-                                            rules={[{ required: true }, { type: 'url', warningOnly: true }, { type: 'string', min: 6 }]}
-                                        >
-                                            <Input placeholder="+14842634382" style={{ width: '100%', height: 48, background: '#FFFFFF', borderRadius: '10px' }} />
-                                        </Form.Item>
+
+
                                         <Form.Item className='text-[16px] font-medium text-[#737373] m-2'
                                             name="state"
                                             label="What state(s) are you licensed/certified in?"
-                                            rules={[{ required: true }, { type: 'url', warningOnly: true }, { type: 'string', min: 6 }]}
+                                            rules={[
+                                                { required: true },
+                                                { type: 'url', warningOnly: true },
+                                                { type: 'string', min: 6 }
+                                            ]}
                                         >
-                                            <Select style={{ width: '100%', height: 48, background: '#FFFFFF', borderRadius: '10px' }}  >
-                                                <Select.Option value="sample">New York, Los Angles, Florida</Select.Option>
-                                            </Select>
+                                            <Row gutter={8} className=' justify-center items-center'>
+                                                <Col flex="auto">
+                                                    <Select
+                                                        style={{ width: '100%', height: 48, background: '#FFFFFF', borderRadius: '10px' }}
+                                                    >
+                                                        <Select.Option value="sample">New York, Los Angeles, Florida</Select.Option>
+                                                    </Select>
+                                                </Col>
+                                                <Col>
+                                                    <Radio value={1}>N/A</Radio>
+                                                </Col>
+                                            </Row>
                                         </Form.Item>
                                         <Form.Item className='text-[16px] font-medium text-[#737373] m-2'
                                             name="address"
@@ -111,7 +119,7 @@ const PersonalInfo = () => {
                                             label="Have you completed training/certification for the service(s) you would like to offer?"
                                             rules={[{ required: true }, { type: 'url', warningOnly: true }, { type: 'string', min: 6 }]}
                                         >
-                                        <Radio>Yes</Radio> <Radio>No</Radio>
+                                            <Radio>Yes</Radio> <Radio>No</Radio>
                                         </Form.Item>
 
                                     </Col>
@@ -137,16 +145,43 @@ const PersonalInfo = () => {
                                         >
                                             <Input placeholder="Nurse" style={{ width: '100%', height: 48, background: '#FFFFFF', borderRadius: '10px' }} />
                                         </Form.Item>
+
                                         <Form.Item className='text-[16px] font-medium text-[#737373] m-2'
+                                            name="state"
+                                            label="Please provide your license(s)/certificate(s) number(s)"
+                                            rules={[
+                                                { required: true },
+                                                { type: 'url', warningOnly: true },
+                                                { type: 'string', min: 6 }
+                                            ]}
+                                        >
+                                            <Row gutter={8} className=' items-center justify-center'>
+                                                <Col flex="auto">
+                                                    <Select
+                                                        style={{ width: '100%', height: 48, background: '#FFFFFF', borderRadius: '10px' }}
+                                                    >
+                                                        <Select.Option value="sample">New York, Los Angeles, Florida</Select.Option>
+                                                    </Select>
+                                                </Col>
+                                                <Col>
+                                                    <Radio value={1}>N/A</Radio>
+                                                </Col>
+                                            </Row>
+                                        </Form.Item>
+
+
+                                        {/* <Form.Item className='text-[16px] font-medium text-[#737373] m-2'
                                             name="license"
                                             label="Please provide your license(s)/certificate(s) number(s)"
                                             rules={[{ required: true }, { type: 'url', warningOnly: true }, { type: 'string', min: 6 }]}
                                         >
-                                            <Input placeholder="652479254" style={{ width: '100%', height: 48, background: '#FFFFFF', borderRadius: '10px' }} />
-                                        </Form.Item>                                        
+                                            <Input placeholder="652479254" style={{ width: '100%', height: 48, background: '#FFFFFF', borderRadius: '10px' }} className='flex' />
+
+                                        </Form.Item>
+                                        <Button><Radio value={1}>N/A</Radio></Button> */}
                                     </Col>
                                 </Row>
-                                <center><button style={{width:'132px', height:'54px', background:'#80C738', borderRadius:'8px', color:'#ffffff', marginRight:'50px'}}>Approve</button > <button style={{width:'132px', height:'54px', background:'#DF3232', borderRadius:'8px', color:'#ffffff'}}>Reject</button></center>
+                                <center><button style={{ width: '132px', height: '54px', background: '#80C738', borderRadius: '8px', color: '#ffffff', marginRight: '50px' }}>Approve</button > <button style={{ width: '132px', height: '54px', background: '#DF3232', borderRadius: '8px', color: '#ffffff' }}>Reject</button></center>
                             </Form>
 
                         </div>
@@ -168,19 +203,19 @@ const PersonalInfo = () => {
                 <div className='flex flex-1 justify-center gap-5'>
                     <Button
                         onClick={() => handleClick('personal')}
-                        style={btn === 'personal' ? { ...buttonStyle, backgroundColor: '#1DA1F2', color: 'white' } : buttonStyle}
+                        style={btn === 'personal' ? { ...buttonStyle, backgroundColor: '#C738BD', color: 'white' } : buttonStyle}
                     >
                         Personal Information
                     </Button>
                     <Button
                         onClick={() => handleClick('business')}
-                        style={btn === 'business' ? { ...buttonStyle, backgroundColor: '#1DA1F2', color: 'white' } : buttonStyle}
+                        style={btn === 'business' ? { ...buttonStyle, backgroundColor: '#C738BD', color: 'white' } : buttonStyle}
                     >
                         Business Information
                     </Button>
                     <Button
                         onClick={() => handleClick('appointment')}
-                        style={btn === 'appointment' ? { ...buttonStyle, backgroundColor: '#1DA1F2', color: 'white' } : buttonStyle}
+                        style={btn === 'appointment' ? { ...buttonStyle, backgroundColor: '#C738BD', color: 'white' } : buttonStyle}
                     >
                         Appointment Information
                     </Button>

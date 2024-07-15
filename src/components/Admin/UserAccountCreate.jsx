@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, message, Row, Col, Table, Modal } from 'antd';
 import { RiDeleteBinLine } from "react-icons/ri";
-import lamisha from "../../assets/client.png";
+import Client from "../../assets/client.png"
 
 const columns = [
     {
@@ -12,7 +12,15 @@ const columns = [
     {
         title: 'User',
         dataIndex: 'user',
-        key: 'user'
+        key: 'user',
+        render: (value) => (
+            <div className='flex gap-2'>
+                <img className='w-8'
+                    src={Client}
+                />
+                <h1>{value}</h1>
+            </div>
+        ),
     },
     {
         title: 'Email',

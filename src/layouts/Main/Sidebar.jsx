@@ -7,6 +7,7 @@ import { LiaUsersCogSolid } from "react-icons/lia";
 import { PiUsersThreeLight } from "react-icons/pi";
 import { TbUserPlus } from "react-icons/tb";
 import { CiSettings } from "react-icons/ci";
+import { RiTeamLine } from "react-icons/ri";
 
 const { SubMenu } = Menu;
 
@@ -45,13 +46,20 @@ const Sidebar = () => {
             path: "/admin-management"
         },
         {
-            id: 6,
+            id:6,
+            title: "Client Team",
+            icon: <RiTeamLine size={24} /> ,
+            path:'client-team',
+        },
+
+        {
+            id: 7,
             title: "User Account Create",
             icon: <TbUserPlus size={24} />,
             path: "/user-account-create"
         },
         {
-            id: 7,
+            id: 8,
             title: "Settings",
             icon: <CiSettings size={24} />,
             path: "/Make-admin",
@@ -85,8 +93,7 @@ const Sidebar = () => {
                     id: 7,
                     title: "Client Portal",
                     path: "/client-portal",
-                },
-
+                }
 
             ]
         },

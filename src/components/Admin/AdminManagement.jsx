@@ -16,7 +16,12 @@ const columns = [
     {
         title: 'User',
         dataIndex: 'user',
-        key: 'user'
+        key: 'user',
+        render: (value) => (
+            <div className='flex gap-2'>
+                <h1>{value}</h1>
+            </div>
+        ),
     },
     {
         title: 'Email',
@@ -43,23 +48,6 @@ for (let i = 0; i < 8; i++) {
 }
 
 const AdminManagement = () => {
-    const [form] = Form.useForm();
-    const [loading, setLoading] = useState(false);
-
-    const onFinish = () => {
-        message.success('Submit success!');
-    };
-
-    const onFinishFailed = () => {
-        message.error('Submit failed!');
-    };
-
-    const start = () => {
-        setLoading(true);
-        setTimeout(() => {
-            setLoading(false);
-        }, 1000);
-    };
 
     //-------------------- Modal --------------- //
     const [isModalOpen, setIsModalOpen] = useState(false);

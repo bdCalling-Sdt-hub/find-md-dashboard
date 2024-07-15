@@ -17,12 +17,16 @@ import UserManagementPage from "../pages/Main/UserManagementPage";
 import AdminManagementPage from "../pages/Main/AdminManagementPage";
 import UserAccountCreate from "../pages/Main/UserAccountCreate";
 import AboutUs from "../pages/Main/AboutUs";
-import StatutesCovaredPage from "../pages/Main/StatutesCovaredPage";
+import StatesCovered from "../pages/Main/StatesCovered";
 import FaqPage from "../pages/Main/FaqPage";
 import ParsonalInfo from "../pages/Main/ParsonalInformationsPage";
 import BuisnessInfo from "../pages/Main/BuisnessInformationsPage";
 import Appoinment from "../pages/Main/AppoinmentDate";
 import ClientDocumentViewPage from "../pages/Main/ClientDocumentViewPage";
+import ClientPortal from "../pages/Main/ClientPortal";
+import TeamPage from "../pages/Main/TeamPage";
+import BusinessResource from "../pages/Main/BusinessResource";
+
 
 const router = createBrowserRouter([
     {
@@ -66,6 +70,11 @@ const router = createBrowserRouter([
                 element: <AdminManagementPage />
             },
             {
+                path: "client-team",
+                element: <TeamPage />
+            },
+
+            {
                 path: "user-account-create",
                 element: <UserAccountCreate />
             },
@@ -79,7 +88,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "states-covered",
-                element: <StatutesCovaredPage />
+                element: <StatesCovered />
             },
             {
                 path: "/parsonal",
@@ -94,9 +103,18 @@ const router = createBrowserRouter([
                 element: <Appoinment />,
             },
             {
-                path: "client-document-view",
+                path: "/client-document-view",
                 element: <ClientDocumentViewPage />
-            }
+            },
+            {
+                path: "/client-portal",
+                element: <BusinessResource />
+            },
+            {
+                path: "/buisness-protal",
+                element: <ClientPortal />
+            },
+
 
 
         ]

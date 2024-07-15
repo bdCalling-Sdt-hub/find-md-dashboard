@@ -1,9 +1,9 @@
 import React from 'react';
-import UserAccountCreat from '../../components/Admin/UserAccountCreate';
+import UserAccountCreated from '../../components/Admin/UserAccountCreate';
 const UserAccountCreate = () => {
     return (
         <div>
-            <UserAccountCreat />
+            <UserAccountCreated />
         </div>
     );
 };
